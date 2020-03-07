@@ -1,4 +1,4 @@
- require("cross-fetch/polyfill");
+require("cross-fetch/polyfill");
 require("isomorphic-form-data");
 const express = require("express");
 const app = express();
@@ -14,7 +14,7 @@ app.get("/authorize", function(req, res) {
   UserSession.authorize(credentials, res);
 });
 
-app.get("/authenticate", function(req, r   es) {
+app.get("/authenticate", function(req, res) {
   if (credentials) {
     UserSession.exchangeAuthorizationCode(
       credentials,
